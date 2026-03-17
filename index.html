@@ -32,35 +32,27 @@
     <p style="font-style: italic; opacity: 0.9;">The Optician | Entebbe, Uganda</p>
 </header>
 
-<div class="container">
-    <div class="booking-section">
-        <h2>📅 Book an Appointment</h2>
-        <p>Fill out the form below and we will get back to you immediately to confirm.</p>
+<section id="booking">
+    <h2>Book an Appointment</h2>
+    <form action="https://formspree.io/f/your-unique-id" method="POST">
+        <label>Your Name:
+            <input type="text" name="name" required>
+        </label>
+        <label>Your Email:
+            <input type="email" name="_replyto" required>
+        </label>
+        <label>Preferred Date:
+            <input type="date" name="date" required>
+        </label>
+        <label>Message/Service Needed:
+            <textarea name="message"></textarea>
+        </label>
         
-        <form id="appointmentForm">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Your phone number" required>
-            </div>
-            <div class="form-group">
-                <label for="condition">Eye Condition/Reason for Visit</label>
-                <select id="condition">
-                    <option value="Check-up">Routine Eye Check-up</option>
-                    <option value="New Frames">Buying New Frames</option>
-                    <option value="Infection">Eye Infection/Pain</option>
-                    <option value="Vision Loss">Blurred Vision</option>
-                    <option value="Other">Other Eye Condition</option>
-                </select>
-            </div>
-            <button type="button" class="book-btn" onclick="submitBooking()">Book Appointment Now</button>
-        </form>
+        <input type="hidden" name="_subject" value="New Optician Appointment Booking">
         
-        <div id="feedbackMessage"></div>
-    </div>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
 
     <div class="contact-section">
         <h2>Direct Emergency Lines</h2>
